@@ -11,9 +11,7 @@ img {
 }
 
 body {
-	width: 100%;
 	height: 100vh;
-	padding: 20px;
 	overflow: hidden;
 }
 
@@ -24,25 +22,30 @@ body {
 
 header {
 	width: 100%;
+	padding: 20px;
+	background: $black;
+	position: fixed;
+	z-index: 999;
+
 	display: flex;
-	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
 }
 
 .logoContainer {
-	max-width: 300px;
+	max-width: 150px;
 }
 
 .headerNav { 
 	ul {
 		list-style: none;
-		margin: 20px 0;
+		margin: 0;
 		padding: 0;
 		display: flex;
 	}
 
 	li {
-		margin: 0 20px;		
+		margin-left: 20px;	
 	}
 }
 
@@ -53,21 +56,74 @@ header {
 
 section {
 	width: 100%;
-	height: calc(100vh - 213px);
+	height: 100vh;
 	background: #e5e5e5;
-	margin-bottom: 20px;
-	overflow: hidden;
+	position: relative;
+	background-position: 50% 100% no-repeat;
+	background-size: cover;
+}
+
+#about {
+	background-image: url(../assets/img_coffee.jpg);
+	// display: none;
+}
+
+#aboutBakedGoods {
+	background-image: url(../assets/img_bakedgoods.jpg);
+}
+
+#aboutColdBrew {
+
+}
+
+#aboutJuices {
+
+}
+
+.descriptionContainer {
+	background: $red;
+	position: absolute;
+	top: 50%;
+	left: 0;
 }
 
 .description {
-	background: $red;
-	padding: 20px;
 	position: relative;
+	padding: 20px 40px;
+	width: 500px;
 
-	h2 {
+		h2 {
 		position: absolute;
 		bottom: 100%;
 		transform: translateY(50%);
 	}
 }
+
+@media (max-width: 480px) {
+
+	body {
+		height: 100%;
+		overflow: initial;
+	}
+	
+	section {
+		height: 100%;
+		background-size: 100%;
+		background-position: 50% 0%;
+	}
+
+	.imageContainer {
+		height: 250px;
+	}
+
+	.descriptionContainer {
+		position: static;
+	}
+
+	.description {
+		width: 100%;
+	}
+
+}
+
 

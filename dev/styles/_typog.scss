@@ -1,11 +1,11 @@
 $red: #D2103E;
 $black: #2C2C2C;
-$white: #F7F7F7;
+$white: #f7f7f7;
 
 $ft-fam-head: 'Oswald', sans-serif;
 $ft-fam-body: Georgia, serif;
 
-$ft-sz-xsmall: 1.2rem;
+$ft-sz-xsmall: 1.0rem;
 $ft-sz-small: 1.4rem;
 $ft-sz-base: 1.6rem;
 $ft-sz-lg: 2.0rem;
@@ -38,7 +38,7 @@ body {
 h1, h2, h3, h4 ,h5 ,h6, .headerNav a {
 	@include ft-style($ft-fam-head, $ft-wt-base);
 	text-transform: uppercase;
-	letter-spacing: 3px;
+	letter-spacing: 5px;
 	padding: 0;
 	margin: 0;
 }
@@ -48,8 +48,10 @@ h1, h2, h3, h4 ,h5 ,h6, .headerNav a {
 // ===========================
 
 .headerNav a {
+	font-size: $ft-sz-xsmall;
 	text-decoration: none;
-	color: lighten($black, 60%);
+	// color: lighten($black, 60%);
+	color: $white;
 	transition: color 0.3s;
 
 	&:hover {
@@ -64,6 +66,11 @@ h1, h2, h3, h4 ,h5 ,h6, .headerNav a {
 .description {
 	color: $white;
 	text-align: justify;
+
+	h2 {
+		font-size: $ft-sz-xxlg;
+	}
+
 	p {
 		line-height: 1.7;
 	}

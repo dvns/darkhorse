@@ -140,20 +140,23 @@ h1, h2, h3, h4, h5, h6, .headerNav a {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   padding: 0;
   margin: 0; }
 
 .headerNav a {
+  font-size: 1rem;
   text-decoration: none;
-  color: #c5c5c5;
+  color: #f7f7f7;
   transition: color 0.3s; }
   .headerNav a:hover {
     color: #D2103E; }
 
 .description {
-  color: #F7F7F7;
+  color: #f7f7f7;
   text-align: justify; }
+  .description h2 {
+    font-size: 3.6rem; }
   .description p {
     line-height: 1.7; }
 
@@ -162,52 +165,82 @@ img {
   display: block; }
 
 body {
-  width: 100%;
   height: 100vh;
-  padding: 20px;
   overflow: hidden; }
 
 header {
   width: 100%;
+  padding: 20px;
+  background: #2C2C2C;
+  position: fixed;
+  z-index: 999;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
 
 .logoContainer {
-  max-width: 300px; }
+  max-width: 150px; }
 
 .headerNav ul {
   list-style: none;
-  margin: 20px 0;
+  margin: 0;
   padding: 0;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
 
 .headerNav li {
-  margin: 0 20px; }
+  margin-left: 20px; }
 
 section {
   width: 100%;
-  height: calc(100vh - 213px);
+  height: 100vh;
   background: #e5e5e5;
-  margin-bottom: 20px;
-  overflow: hidden; }
+  position: relative;
+  background-position: 50% 100% no-repeat;
+  background-size: cover; }
+
+#about {
+  background-image: url(../assets/img_coffee.jpg); }
+
+#aboutBakedGoods {
+  background-image: url(../assets/img_bakedgoods.jpg); }
+
+.descriptionContainer {
+  background: #D2103E;
+  position: absolute;
+  top: 50%;
+  left: 0; }
 
 .description {
-  background: #D2103E;
-  padding: 20px;
-  position: relative; }
+  position: relative;
+  padding: 20px 40px;
+  width: 500px; }
   .description h2 {
     position: absolute;
     bottom: 100%;
     -webkit-transform: translateY(50%);
             transform: translateY(50%); }
+
+@media (max-width: 480px) {
+  body {
+    height: 100%;
+    overflow: initial; }
+  section {
+    height: 100%;
+    background-size: 100%;
+    background-position: 50% 0%; }
+  .imageContainer {
+    height: 250px; }
+  .descriptionContainer {
+    position: static; }
+  .description {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
