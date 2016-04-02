@@ -1,0 +1,73 @@
+@import 'setup';
+@import 'typog';
+
+// ===========================
+//	GENERAL
+// ===========================
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	padding: 20px;
+	overflow: hidden;
+}
+
+
+// ===========================
+//	HEADER
+// ===========================
+
+header {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.logoContainer {
+	max-width: 300px;
+}
+
+.headerNav { 
+	ul {
+		list-style: none;
+		margin: 20px 0;
+		padding: 0;
+		display: flex;
+	}
+
+	li {
+		margin: 0 20px;		
+	}
+}
+
+
+// ===========================
+//	SECTIONS GENERAL
+// ===========================
+
+section {
+	width: 100%;
+	height: calc(100vh - 213px);
+	background: #e5e5e5;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.description {
+	background: $red;
+	padding: 20px;
+	position: relative;
+
+	h2 {
+		position: absolute;
+		bottom: 100%;
+		transform: translateY(50%);
+	}
+}
+

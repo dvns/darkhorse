@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.js"],"names":[],"mappings":";;AAAA,EAAE,YAAU;AACX,SAAQ,GAAR,CAAY,0BAAZ,EADW;CAAV,CAAF","file":"main.js","sourcesContent":["$(function(){\n\tconsole.log('work work work work work');\n});"],"sourceRoot":"/source/"}

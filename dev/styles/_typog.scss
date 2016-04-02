@@ -1,0 +1,70 @@
+$red: #D2103E;
+$black: #2C2C2C;
+$white: #F7F7F7;
+
+$ft-fam-head: 'Oswald', sans-serif;
+$ft-fam-body: Georgia, serif;
+
+$ft-sz-xsmall: 1.2rem;
+$ft-sz-small: 1.4rem;
+$ft-sz-base: 1.6rem;
+$ft-sz-lg: 2.0rem;
+$ft-sz-xlg: 2.4rem;
+$ft-sz-xxlg: 3.6rem;
+
+$ft-wt-light: 300;
+$ft-wt-base: 400;
+$ft-wt-bold: 700;
+
+
+@mixin ft-style($ft-fam, $ft-wt) {
+	font-family: $ft-fam;
+	font-weight: $ft-wt;
+}
+
+// ===========================
+//	GENERAL
+// ===========================
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	@include ft-style($ft-fam-body, $ft-wt-base);
+	font-size: 1.6rem;
+}
+
+h1, h2, h3, h4 ,h5 ,h6, .headerNav a {
+	@include ft-style($ft-fam-head, $ft-wt-base);
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	padding: 0;
+	margin: 0;
+}
+
+// ===========================
+//	HEADER
+// ===========================
+
+.headerNav a {
+	text-decoration: none;
+	color: lighten($black, 60%);
+	transition: color 0.3s;
+
+	&:hover {
+		color: $red;
+	}
+}
+
+// ===========================
+//	DESCRIPTION
+// ===========================
+
+.description {
+	color: $white;
+	text-align: justify;
+	p {
+		line-height: 1.7;
+	}
+}
