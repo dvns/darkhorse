@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6, .headerNav a {
 .headerNav a {
   font-size: 1rem;
   text-decoration: none;
-  color: #f7f7f7;
+  color: #2c2c2c;
   transition: color 0.3s; }
   .headerNav a:hover {
     color: #D2103E; }
@@ -160,6 +160,11 @@ h1, h2, h3, h4, h5, h6, .headerNav a {
   .description p {
     line-height: 1.7; }
 
+.storeContainer p {
+  font-size: 1.4rem;
+  margin: 0;
+  line-height: 1.5; }
+
 img {
   max-width: 100%;
   display: block; }
@@ -171,7 +176,7 @@ body {
 header {
   width: 100%;
   padding: 20px;
-  background: #2C2C2C;
+  background: #f7f7f7;
   position: fixed;
   z-index: 999;
   display: -webkit-flex;
@@ -203,25 +208,63 @@ section {
   height: 100vh;
   background: #e5e5e5;
   position: relative;
-  background-position: 50% 100% no-repeat;
+  background: 50% 100% no-repeat;
   background-size: cover; }
 
 #about {
+  position: relative; }
+
+.aboutNav {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 999; }
+  .aboutNav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .aboutNav li {
+    margin: 20px; }
+  .aboutNav a {
+    text-decoration: none;
+    outline: 0;
+    color: #f7f7f7; }
+    .aboutNav a:hover .aboutNavIcon {
+      opacity: 1;
+      fill: #D2103E; }
+
+.aboutNavIcon {
+  fill: #f7f7f7;
+  transition: all 0.3s;
+  opacity: 0.9; }
+
+#aboutEspresso {
   background-image: url(../assets/img_coffee.jpg); }
 
 #aboutBakedGoods {
   background-image: url(../assets/img_bakedgoods.jpg); }
 
+#aboutColdBrew {
+  background-image: url(../assets/img_coldbrew.jpg); }
+
+#aboutJuices {
+  background-image: url(../assets/img_juices.jpg); }
+
 .descriptionContainer {
   background: #D2103E;
   position: absolute;
-  top: 50%;
-  left: 0; }
+  bottom: 20%;
+  left: 0;
+  width: 500px; }
 
 .description {
   position: relative;
-  padding: 20px 40px;
-  width: 500px; }
+  padding: 20px 40px; }
   .description h2 {
     position: absolute;
     bottom: 100%;
@@ -236,11 +279,50 @@ section {
     height: 100%;
     background-size: 100%;
     background-position: 50% 0%; }
+  .aboutNav {
+    display: none; }
   .imageContainer {
-    height: 250px; }
+    height: 200px; }
   .descriptionContainer {
-    position: static; }
-  .description {
+    position: static;
     width: 100%; } }
+
+#mapContainer {
+  position: absolute;
+  top: 95px;
+  width: 100%;
+  height: calc(100vh - 375px); }
+
+.storeContainer {
+  width: 100%;
+  overflow-x: scroll;
+  background: #D2103E;
+  color: #f7f7f7;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 50px; }
+
+.store {
+  padding: 40px;
+  padding-right: 80px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
+
+.storeName {
+  margin-bottom: 20px; }
+
+.hours {
+  margin-top: 10px; }
+
+footer {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  z-index: 999;
+  background: #f7f7f7; }
 
 /*# sourceMappingURL=style.css.map */

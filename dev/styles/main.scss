@@ -23,7 +23,8 @@ body {
 header {
 	width: 100%;
 	padding: 20px;
-	background: $black;
+	background: $white;
+	// border-bottom: 10px solid $red;
 	position: fixed;
 	z-index: 999;
 
@@ -59,13 +60,60 @@ section {
 	height: 100vh;
 	background: #e5e5e5;
 	position: relative;
-	background-position: 50% 100% no-repeat;
+	background: 50% 100% no-repeat;
 	background-size: cover;
 }
 
+
+// ===========================
+//	ABOUT SECTION
+// ===========================
+
 #about {
+	position: relative;
+}
+
+.aboutNav {
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 999;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+	}
+
+	li {
+		margin: 20px;
+	}
+
+	a {
+		text-decoration: none;
+		outline: 0;
+		color: $white;
+
+		&:hover {
+			.aboutNavIcon {
+				opacity: 1;
+				fill: $red;
+			}
+		}
+	}
+}
+
+.aboutNavIcon {
+	fill: $white;
+	transition: all 0.3s;
+	opacity: 0.9;
+}
+
+#aboutEspresso {
 	background-image: url(../assets/img_coffee.jpg);
-	// display: none;
+
 }
 
 #aboutBakedGoods {
@@ -73,24 +121,24 @@ section {
 }
 
 #aboutColdBrew {
-
+	background-image: url(../assets/img_coldbrew.jpg);
 }
 
 #aboutJuices {
-
+	background-image: url(../assets/img_juices.jpg);
 }
 
 .descriptionContainer {
 	background: $red;
 	position: absolute;
-	top: 50%;
+	bottom: 20%;
 	left: 0;
+	width: 500px;
 }
 
 .description {
 	position: relative;
 	padding: 20px 40px;
-	width: 500px;
 
 		h2 {
 		position: absolute;
@@ -111,19 +159,72 @@ section {
 		background-size: 100%;
 		background-position: 50% 0%;
 	}
+	
+	.aboutNav {
+		display: none;
+	}
 
 	.imageContainer {
-		height: 250px;
+		height: 200px;
 	}
 
 	.descriptionContainer {
 		position: static;
-	}
-
-	.description {
 		width: 100%;
 	}
 
+} //media query @480px
+
+
+// ===========================
+//	LOCATION SECTION
+// ===========================
+
+#mapContainer {
+	position: absolute;
+	top: 95px;
+	width: 100%;
+	height: calc(100vh - 375px);	
+}
+
+.storeContainer {
+	width: 100%;
+	overflow-x: scroll;
+	background: $red;
+	color: $white;
+	display: flex;
+	position: absolute;
+	bottom: 50px;
+}
+
+.store {
+	padding: 40px;
+	padding-right: 80px;
+	flex-shrink: 0;
+}
+
+.storeName {
+	margin-bottom: 20px;
+}
+
+.hours {
+	margin-top: 10px;
+}
+
+
+
+
+// ===========================
+//	FOOTER
+// ===========================
+
+footer {
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	bottom: 0;
+	z-index: 999;
+	background: $white;
 }
 
 
