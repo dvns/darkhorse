@@ -1,9 +1,12 @@
 'use strict';
 
+var initMap;
+var map;
+
 var aboutNav = function aboutNav() {
 	var currentWidth = window.innerWidth;
 
-	if (currentWidth >= 480) {
+	if (currentWidth > 600) {
 		$('.aboutNav ul').each(function () {
 			// For each set of tabs, keep track of which tab is active and its associated content
 			var active,
@@ -46,10 +49,15 @@ var aboutNav = function aboutNav() {
 		}
 };
 
-var initMap;
-var map;
-
 $(function () {
+
+	// If the width is greater than 600 px when the page initially loads, enable about navigation
+	aboutNav();
+
+	$(window).on('resize', function () {
+		// If the window is resized to a width less than 600px, show all sections
+		aboutNav();
+	});
 
 	initMap = function initMap() {
 		// This is where the new map is created
@@ -61,13 +69,5 @@ $(function () {
 			styles: [{ "featureType": "landscape", "stylers": [{ "saturation": -100 }, { "lightness": 65 }, { "visibility": "on" }] }, { "featureType": "poi", "stylers": [{ "saturation": -100 }, { "lightness": 51 }, { "visibility": "simplified" }] }, { "featureType": "road.highway", "stylers": [{ "saturation": -100 }, { "visibility": "simplified" }] }, { "featureType": "road.arterial", "stylers": [{ "saturation": -100 }, { "lightness": 30 }, { "visibility": "on" }] }, { "featureType": "road.local", "stylers": [{ "saturation": -100 }, { "lightness": 40 }, { "visibility": "on" }] }, { "featureType": "transit", "stylers": [{ "saturation": -100 }, { "visibility": "simplified" }] }, { "featureType": "administrative.province", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "labels", "stylers": [{ "visibility": "on" }, { "lightness": -25 }, { "saturation": -100 }] }, { "featureType": "water", "elementType": "geometry", "stylers": [{ "hue": "#ffff00" }, { "lightness": -25 }, { "saturation": -97 }] }]
 		});
 	};
-
-	// If the width is greater than 480 px when the page initially loads, enable about navigation
-	aboutNav();
-
-	$(window).on('resize', function () {
-		// If the window is resized to a width less than 480px, show all sections
-		aboutNav();
-	});
 });
 //# sourceMappingURL=main.js.map

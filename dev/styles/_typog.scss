@@ -86,6 +86,48 @@ h1, h2, h3, h4 ,h5 ,h6, .headerNav a {
 		margin: 0;
 		line-height: 1.5;
 	}
+
+	a {
+		text-decoration: none;
+		color: $white;
+	}
+}
+
+
+// ===========================
+//	CONTACT
+// ===========================
+
+#contact {
+	color: $white;
+
+	h2 {
+		font-size: $ft-sz-xxlg * 2;
+	}
+
+	p {
+		font-size: $ft-sz-xlg;
+		letter-spacing: 2px;
+	}
+}
+
+
+// ===========================
+//	FOOTER
+// ===========================
+
+.copyright {
+	@include ft-style($ft-fam-head, $ft-wt-base);
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: $ft-sz-xsmall;
+
+	a {
+		text-decoration: none;
+		color: $red;
+	}
 }
 
 

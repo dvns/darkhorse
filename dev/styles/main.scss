@@ -22,9 +22,9 @@ body {
 
 header {
 	width: 100%;
+	min-height: 95px;
 	padding: 20px;
 	background: $white;
-	// border-bottom: 10px solid $red;
 	position: fixed;
 	z-index: 999;
 
@@ -35,6 +35,7 @@ header {
 
 .logoContainer {
 	max-width: 150px;
+	flex-shrink: 5;
 }
 
 .headerNav { 
@@ -62,6 +63,37 @@ section {
 	position: relative;
 	background: 50% 100% no-repeat;
 	background-size: cover;
+}
+
+// ===========================
+//	SECTIONS GENERAL @600PX
+// ===========================
+
+@media (max-width: 600px) {
+	body {
+		height: 100%;
+		overflow: initial;
+	}
+	
+	section {
+		height: 100%;
+	}
+
+	main {
+		padding-top: 95px;
+	}
+
+}
+
+// ===========================
+//	SECTIONS GENERAL @480PX
+// ===========================
+
+@media (max-width: 480px) {
+	section {
+		background-position: 50% 0;
+		background-size: 100%;
+	}
 }
 
 
@@ -147,25 +179,19 @@ section {
 	}
 }
 
-@media (max-width: 480px) {
 
-	body {
-		height: 100%;
-		overflow: initial;
-	}
-	
-	section {
-		height: 100%;
-		background-size: 100%;
-		background-position: 50% 0%;
-	}
+// ===========================
+//	GENERAL SECTION @600PX
+// ===========================
+
+@media (max-width: 600px) {
 	
 	.aboutNav {
 		display: none;
 	}
 
 	.imageContainer {
-		height: 200px;
+		height: 500px;
 	}
 
 	.descriptionContainer {
@@ -173,7 +199,19 @@ section {
 		width: 100%;
 	}
 
-} //media query @480px
+}
+
+// ===========================
+//	ABOUT SECTION @480PX
+// ===========================
+
+@media (max-width: 480px) {
+
+	.imageContainer {
+		height: 200px;
+	}
+
+}
 
 
 // ===========================
@@ -211,7 +249,91 @@ section {
 	margin-top: 10px;
 }
 
+// ===========================
+//	LOCATION SECTION @600PX
+// ===========================
 
+@media (max-width: 600px) {
+
+	#mapContainer {
+		position: static;
+		top: 0;
+		height: 500px;
+	}
+
+	.storeContainer {
+		position: static;
+	}
+
+}
+
+
+// ===========================
+//	LOCATION SECTION @480PX
+// ===========================
+
+@media (max-width: 480px) {
+
+	#mapContainer {
+		height: 300px;
+	}
+
+	.storeContainer {
+		flex-wrap: wrap;
+		overflow-x: initial;
+		padding: 40px 0;
+	}
+
+	.store {
+		width: 100%;
+		padding: 20px 40px;
+	}
+
+	.storeName {
+		margin-bottom: 10px;
+	}
+
+}
+
+
+// ===========================
+//	CONTACT SECTION
+// ===========================
+
+#contact {
+	background: $black url(../assets/png_logo_wings.png) 100% 50% no-repeat;
+	background-size: 50%;
+	padding: 40px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+// ===========================
+//	CONTACT SECTION @600PX
+// ===========================
+
+@media (max-width: 600px) {
+
+	#contact {
+		margin-bottom: 50px;	
+	}
+
+}
+
+// ===========================
+//	CONTACT SECTION @480PX
+// ===========================
+
+@media (max-width: 480px) {
+
+	#contact {
+		background-size: cover;
+		margin-bottom: 0;
+	}
+
+}
 
 
 // ===========================
@@ -222,9 +344,23 @@ footer {
 	position: fixed;
 	width: 100%;
 	height: 50px;
+	padding: 20px;
 	bottom: 0;
 	z-index: 999;
 	background: $white;
+
+	display: flex;
+	align-items: center;
 }
 
+// ===========================
+//	FOOTER @480PX
+// ===========================
 
+@media (max-width: 480px) {
+	
+	footer {
+		position: static;
+	}
+
+}
